@@ -1,0 +1,45 @@
+/* 
+
+// FONT \\
+FONT: font-family: 'Fira Sans', sans-serif;
+
+// COLORS \\
+Green: rgb(50, 173, 83)
+Background White = whitesmoke
+White = Default | rgb(0, 0, 0)
+
+*/
+
+
+body{;
+    background-color: rgb(60, 60, 60);
+    margin: 0;
+}
+
+header{
+    background-color: rgb(50, 173, 83);
+}
+
+h1{
+    padding: 0.5em 0 0.5em 0;
+    color: whitesmoke;
+    text-align: center;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+main{
+    margin-top: 1em;
+}
+
+label{
+    color: whitesmoke;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+input{
+    padding: 0.2em;
+    border: 2px solid rgb(50, 173, 83);
+    border-radius: 10px;
+    font-family: 'Fira Sans', sans-serif;
+}
