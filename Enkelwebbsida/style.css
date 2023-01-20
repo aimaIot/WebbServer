@@ -1,17 +1,19 @@
 /* 
 
 // FONT \\
-FONT: font-family: 'Fira Sans', sans-serif;
+Main Font: font-family: 'Fira Sans', sans-serif;
 
 // COLORS \\
-Green: rgb(50, 173, 83)
-Background White = whitesmoke
-White = Default | rgb(0, 0, 0)
+Light Green:    rgb(50, 173, 83)
+Dark Green:     rgb(26, 156, 74)
+Darker Green:   rgb(22, 138, 65)
+
+Dark grey = rgb(28, 28, 28)
 
 */
 
 
-body{;
+body{
     background-color: rgb(60, 60, 60);
     margin: 0;
 }
@@ -22,7 +24,7 @@ header{
 
 h1{
     padding: 0.5em 0 0.5em 0;
-    color: whitesmoke;
+    color: white;
     text-align: center;
     margin: 0;
     font-family: 'Fira Sans', sans-serif;
@@ -33,8 +35,10 @@ main{
 }
 
 label{
-    color: whitesmoke;
+    color: white;
     font-family: 'Fira Sans', sans-serif;
+    margin-top: 2em;
+    text-align: center;
 }
 
 input{
@@ -42,4 +46,46 @@ input{
     border: 2px solid rgb(50, 173, 83);
     border-radius: 10px;
     font-family: 'Fira Sans', sans-serif;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    text-align: center;
+}
+
+input[type="submit"]:hover{
+    border-color: white;
+    transition-duration: 0.15s;
+}
+
+nav{
+    display: flex;
+}
+
+button{
+    background-color: rgb(26, 156, 74);
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    border: 0;
+    padding: 1em;
+    width: 100%;
+}
+
+button:hover{
+    background-color:rgb(22, 138, 65);
+    transition-duration: 0.15s;
+}
+
+/* CALCULATOR */
+
+
+
+/* DAYS LIVED */
+
+.DaysLivedMain{
+    margin: 5em 0 0 4em;
+}
+
+.DaysLivedp{
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    text-align: center;
 }
