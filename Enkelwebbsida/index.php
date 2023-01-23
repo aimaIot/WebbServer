@@ -34,6 +34,23 @@
     </form>
     </nav>
 
+    <main>
+
+        <form method="GET">
+            <label for="NumberOne">Number One</label>
+            <input type="text" name="NumberOne" value="">
+
+            <label for="NumberTwo">Number Two</label>
+            <input type="text" name="NumberTwo" value="">
+
+            <label for="Operator">Operator</label>
+            <input type="text" name="Operator" value="">
+
+            <button type="submit">Calculate</button>
+        </form>
+
+    </main>
+
 </body>
 </html>
 
@@ -42,14 +59,11 @@
 
 
 $calculatorHTML = '
-<main>
-<label for="CalculatorBoxOne">Number One</label>
-<input type="text" name="CalculatorBoxOne" value="">
-</main>
+
 ';
 
 $daysLivedHTML = '
-<main class="DaysLivedMain">
+<main>
 <form method="GET">
     <label for="birthdate">Birthday (YYYY/MM/DD)</label>
     <br></br>
