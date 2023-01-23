@@ -31,7 +31,7 @@ h1{
 }
 
 main{
-    margin-top: 1em;
+    margin: 5em 1em 0 4em;
 }
 
 label{
@@ -57,7 +57,8 @@ input[type="submit"]:hover{
 }
 
 nav{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10rem);
 }
 
 button{
@@ -79,10 +80,6 @@ button:hover{
 
 
 /* DAYS LIVED */
-
-.DaysLivedMain{
-    margin: 5em 0 0 4em;
-}
 
 .DaysLivedp{
     font-family: 'Fira Sans', sans-serif;
