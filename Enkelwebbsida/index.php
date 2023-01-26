@@ -34,19 +34,23 @@
     </form>
     </nav>
 
-    <main>
+    <main class="calculatorMain">
 
         <form method="GET">
             <label for="NumberOne">Number One</label>
-            <input type="text" name="NumberOne" value="">
+            <input type="number" name="NumberOne" value="">
 
             <label for="NumberTwo">Number Two</label>
-            <input type="text" name="NumberTwo" value="">
-
+            <input type="number" name="NumberTwo" value="">
+ 
             <label for="Operator">Operator</label>
-            <input type="text" name="Operator" value="">
-
-            <button type="submit">Calculate</button>
+            <select list="operators" name="Operator">
+            <datalist id="operators">
+                <option value="+">Add</option>
+                <option value="-">Substract</option>
+                <option value="*">Multiply</option>
+                <option value="/">Divide</option>
+            <button type="submit">Calculate</button> <!-- THIS NO WORK, FIX PLEASE -->
         </form>
 
     </main>
@@ -57,6 +61,7 @@
 
 <?php
 
+$dateToday = date("Y-m-d");
 
 $calculatorHTML = '
 
@@ -67,7 +72,7 @@ $daysLivedHTML = '
 <form method="GET">
     <label for="birthdate">Birthday (YYYY/MM/DD)</label>
     <br></br>
-    <input type="text" name="birthdate" placeholder="YYYY/MM/DD">
+    <input type="date" name="birthdate" max="' . $dateToday . '" placeholder="YYYY/MM/DD">
     <input type="submit" name="submit_birthdate" value="Submit">
 </form>
 </main>
@@ -82,7 +87,6 @@ if (isset($_GET["site"])){
     }
 }
 
-
 // PAGE HANDLERS \\
 
 // CALCULATOR
@@ -92,9 +96,9 @@ if(isset($_GET["submit_birthdate"])){
     $birthdate = $_GET["birthdate"];
 
     $totalDays = date("Y") * 365.24 + date("m") * 30.4 + date("d");
-    $birthdateArray = explode("/", $birthdate);
+    $birthdateArray = explode("-", $birthdate);
     $daysAlive = floor($totalDays - ($birthdateArray[0] * 365.24 + $birthdateArray[1] * 30.4 + $birthdateArray[2]));
 
-    echo "<p class=DaysLivedp>You have been alive for " . $daysAlive . " days!</p>";
+    echo "<p class=DaysLivedp>You have been alive for $daysAlive days!</p>";
 }
 ?>
