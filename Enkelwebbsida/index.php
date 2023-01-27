@@ -27,34 +27,7 @@
         <input type="hidden" name="site" value="daysLived">
         <button type="submit">Days Lived</button>
     </form>
-
-    <form method="GET">
-        <input type="hidden" name="site" value="site2">
-        <button type="submit">Site3</button>
-    </form>
     </nav>
-
-    <main class="calculatorMain">
-
-        <form method="GET">
-            <label for="NumberOne">Number One</label>
-            <input type="number" name="NumberOne" value="">
-
-            <label for="NumberTwo">Number Two</label>
-            <input type="number" name="NumberTwo" value="">
- 
-            <label for="Operator">Operator</label>
-            <select list="operators" name="Operator">
-            <datalist id="operators">
-                <option value="+">Add</option>
-                <option value="-">Substract</option>
-                <option value="*">Multiply</option>
-                <option value="/">Divide</option>
-            <button type="submit">Calculate</button> <!-- THIS NO WORK, FIX PLEASE -->
-        </form>
-
-    </main>
-
 </body>
 </html>
 
@@ -64,7 +37,31 @@
 $dateToday = date("Y-m-d");
 
 $calculatorHTML = '
+<main class="calculatorMain">
 
+<form method="GET">
+    <label for="NumOne">Number One</label>
+    <input class="calculatorInput" type="number" name="NumOne" value="">
+
+    <label for="NumTwo">Number Two</label>
+    <input class="calculatorInput" type="number" name="NumTwo" value="">
+
+    <label for="Operator">Operator</label>
+    <select class="calculatorInput" list="operators" name="Operator">
+    
+    <datalist id="operators">
+        <option value="+">Add</option>
+        <option value="-">Substract</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+    </datalist>
+    
+    <input type="hidden" name="calculate">
+    <button type="submit" class="calculateButton">Calculate</button>
+    
+</form>
+
+</main>
 ';
 
 $daysLivedHTML = '
@@ -91,14 +88,64 @@ if (isset($_GET["site"])){
 
 // CALCULATOR
 
+if(isset($_GET["calculate"])){
+    $numOne = $_GET["NumOne"];
+    $numTwo = $_GET["NumTwo"];
+    $operator = $_GET["Operator"];
+
+    echo $calculatorHTML;
+
+    if($numOne == ""){
+        echo '<p class="calculatorP">Error: Ensure all inputs are filled</p>';
+        exit();
+    }
+    elseif($numTwo == ""){
+        echo '<p class="calculatorP">Error: Ensure all inputs are filled</p>';
+        exit();
+    }
+    elseif($operator == ""){
+        echo '<p class="calculatorP">Error: Ensure all inputs are filled</p>';
+        exit();
+    }
+
+    $output;
+    switch($operator){
+        case '+':
+            $output = $numOne + $numTwo;
+            break;
+
+        case '-':
+        $output = $numOne - $numTwo;
+        break;
+
+        case '*':
+            $output = $numOne * $numTwo;
+            break;
+
+        case '/':
+            $output = $numOne / $numTwo;
+            break;
+    }
+
+    echo '<p class="calculatorP">Result: ' . $output . "</p>";
+}
+
 // DAYS LIVED
+
 if(isset($_GET["submit_birthdate"])){
     $birthdate = $_GET["birthdate"];
+    echo $daysLivedHTML;
+
+    if($birthdate == ""){
+        echo '<p class="DaysLivedp">Error: Insert a valid date</p>';
+        exit();
+    }
 
     $totalDays = date("Y") * 365.24 + date("m") * 30.4 + date("d");
     $birthdateArray = explode("-", $birthdate);
     $daysAlive = floor($totalDays - ($birthdateArray[0] * 365.24 + $birthdateArray[1] * 30.4 + $birthdateArray[2]));
-
+    
+    
     echo "<p class=DaysLivedp>You have been alive for $daysAlive days!</p>";
 }
 ?>
