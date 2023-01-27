@@ -87,10 +87,29 @@ button:hover{
 
 /* CALCULATOR */
 
+.calculatorInput{
+    margin: 0 1em 0 1em;
+}
+
+.calculateButton{
+    height: 20%;
+    width: 10%;
+    border-radius: 15px;
+    margin-left: 1.5em;
+}
+
+.calculatorP{
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    margin: 2em 0 0 2.5em;
+    font-size: 1.5em;
+}
+
 /* DAYS LIVED */
 
 .DaysLivedp{
     font-family: 'Fira Sans', sans-serif;
     color: white;
     text-align: center;
+    font-size: 1.5em;
 }
