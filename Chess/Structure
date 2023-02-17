@@ -1,6 +1,4 @@
-Work split
+Work documentation:
 
-Board and overlay: Noah - create chess board, overlay with HTML/CSS styling.
-Chess pieces (part 1): Noah - create knights, bishops with easy placement and movement.
-Chess pieces (part 2): Anto friend - pawn and rook + create queen and king with unique properties.
-Timer and score: Anto - implement timer, keep track of score.
+HTML and CSS setup - Noah
+PHP Setup - Antony & Noah
