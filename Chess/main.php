@@ -7,7 +7,7 @@
 
 <body>
     <div class="overlay">
-        <form class="chessboard" method="POST">
+        <form class="chessboard" method="GET">
                 <?php
         $letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
@@ -61,26 +61,15 @@
                     }
                     
                     $indexNum++;
-                    echo '<button class="' . $tile . '" id="' . $letters[$row] . ($column + 1) . '">' . $icon . '</button>';
-
+                    $name = $letters[$row] . ($column + 1);
+                    
+                    echo '<input type="submit" name="piece" value="' . $icon . '" class="' . $tile . '" name="position" value="' . $name . '" id="' . $name . '"></input>';
                 }
                 echo "</div>";
             }
-
-
-
         }
 
         printBoard();
-
-        function copyIcon($icon, $id) {
-
-            session_start(); 
-            $_SESSION["copy_icon"] = $icon; // Antony please take over
-            $_SESSION["copy_from"] = $id; // This do the copy of the icon in square
-
-        }
-
         
 
         ?>
