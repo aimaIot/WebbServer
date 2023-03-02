@@ -33,7 +33,7 @@ body {
     display: flex;
 }
 
-.row button {
+.row input {
     font-size: 2em;
 }
 
