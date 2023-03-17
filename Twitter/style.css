@@ -1,0 +1,208 @@
+/* 
+- FONTS -
+
+font-family: 'Open Sans', sans-serif;
+
+- COLORS -
+
+Background black: rgb(15, 15, 15)
+Header grey: rgb(30, 30, 30)
+Secondary grey: rgb(35, 35, 35)
+White: rgb(255, 255, 255)
+Baby blue: rgb(29, 161, 242)
+Navy blue: rgb(24, 32, 46)
+Light red: rgb(235, 47, 47)
+
+
+*/
+
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    padding: 0.7em 0 0.7em 0;
+    gap: 30%;
+}
+
+header img{
+    height: 50px;
+    width: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+}
+
+header a{
+    margin-left: auto;
+}
+
+.headerButtons{
+    margin-right: 5em;
+}
+
+.headerButtons a{
+    margin-left: 1.75em;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: rgb(29, 161, 242) 2px solid;
+}
+
+.headerButtons a:hover{
+    transition-duration: 0.25s;
+    background-color: rgb(29, 161, 242);
+}
+
+/* BODY */
+
+body{
+    background-color: rgb(15, 15, 15);
+    margin: 0;
+}
+
+p, label{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.accountFormContainer{
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(29, 161, 242) 3px;
+    width: 40%;
+    margin: 4em auto 4em auto;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    background-color: rgb(35, 35, 35);
+    border-radius: 1.25em;
+}
+
+input{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    background-color: rgb(35, 35, 35);
+}
+
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+.accountFormInput{
+    font-size: 0.9em;
+    padding: 0.25em 0 0.25em 0;
+    box-shadow: none;
+    border: solid 1px rgb(255, 255, 255);
+    padding-left: 5px;
+}
+
+input[type="submit"]{
+    background-color: rgb(35, 35, 35);
+    border: solid 2px rgb(29, 161, 242);
+    width: 10em;
+    height: 2.3em;
+    margin-top: 1em;
+
+    font-size: 1em;
+
+    align-self: center;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0.8em;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(29, 161, 242);
+    transition-duration: 0.3s;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+
+.formInfo{
+    font-size: 13px;
+    margin: 5px 0 0 0;
+}
+
+.errorMsg{
+    align-self: center;
+    color: rgb(235, 47, 47);
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.feedbackMsg{
+    align-self: center;
+    color: rgb(102, 250, 107);
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.postTweetContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.tweetTextInput{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    border-radius: 0.8em;
+    background-color: rgb(35, 35, 35);
+    resize: none;
+    width: 25%;
+    padding: 5px 0 0 5px;
+    box-sizing: border-box;
+}
+
+.divider{
+    margin-top: 2em;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(200, 200, 200);
+    border: none;
+}
+
+.tweetsWrapper{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+
+.tweetContainer{
+    margin-top: 4em;
+    margin-bottom: 4em;
+    border-radius: 0.2em;
+    background-color: rgb(35, 35, 35);
+    border: 2px solid rgb(29, 161, 242);
+}
+
+.tweetOwnerUsername{
+    margin: 0.75em 0 0.75em 1em;
+    font-weight: bold;
+}
+
+.tweetText{
+    margin: 1em;
+}
+
+.tweetLine{
+    background-color: rgb(255, 255, 255);
+    height: 1px;
+    border: none;
+}
+
+
+/* FOOTER */
